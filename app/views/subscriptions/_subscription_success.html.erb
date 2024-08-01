@@ -1,0 +1,56 @@
+<div id="subscription_success">
+  <p>Subscribed successfully!</p>
+  <span class="close-btn">&times;</span>
+</div>
+<style>
+    #subscription_success {
+  position: relative;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 15px 25px;
+  border-radius: 5px;
+  width: fit-content;
+  margin: 20px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+#subscription_success p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#subscription_success .close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #155724;
+}
+
+#subscription_success .close-btn:hover {
+  color: #721c24;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#subscription_success {
+  animation: fadeIn 0.5s;
+}
+
+</style>
+
+<script>
+  document.querySelector('#subscription_success .close-btn').addEventListener('click', function() {
+    document.getElementById('subscription_success').style.display = 'none';
+  });
+</script>

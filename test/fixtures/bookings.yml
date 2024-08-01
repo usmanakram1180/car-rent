@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_type: MyString
+  pick_up_location: MyString
+  drop_off_location: MyString
+  pick_up_date: 2024-07-31
+  pick_up_time: MyString
+  drop_off_date: 2024-07-31
+  drop_off_time: MyString
+
+two:
+  car_type: MyString
+  pick_up_location: MyString
+  drop_off_location: MyString
+  pick_up_date: 2024-07-31
+  pick_up_time: MyString
+  drop_off_date: 2024-07-31
+  drop_off_time: MyString

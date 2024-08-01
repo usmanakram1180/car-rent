@@ -1,0 +1,5 @@
+<% if @subscription.errors.any? %>
+  alert('Subscription failed: <%= @subscription.errors.full_messages.join(", ") %>');
+<% else %>
+  alert('Subscribed successfully.');
+<% end %>

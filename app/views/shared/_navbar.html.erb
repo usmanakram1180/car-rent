@@ -1,0 +1,49 @@
+<!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a href="<%= home_path %>" class="navbar-brand p-0">
+                        <h1 class="display-6 text-primary">
+                            <i class="fas fa-car-alt me-3"></i>Cental
+                        </h1>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto py-0">
+                            <%= link_to 'Home', root_path, class: 'nav-item nav-link active' %>
+                            <%= link_to 'About', about_path, class: 'nav-item nav-link' %>
+                            <%= link_to 'Service', service_path, class: 'nav-item nav-link' %>
+                            <%= link_to 'Blog', blog_path, class: 'nav-item nav-link' %>
+
+                            <div class="nav-item dropdown">
+                                <%= link_to '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' } do %>
+                                Pages
+                                <% end %>
+                                <div class="dropdown-menu m-0">
+                                <%= link_to 'Our Feature', feature_path, class: 'dropdown-item' %>
+                                <%= link_to 'Our Cars', cars_path, class: 'dropdown-item' %>
+                                <%= link_to 'Our Team', team_path, class: 'dropdown-item' %>
+                                <%= link_to 'Testimonial', testimonial_path, class: 'dropdown-item' %>
+                                </div>
+                            </div>
+                            <%= link_to 'Contact', contact_path, class: 'nav-item nav-link' %>
+                        </div>
+                        <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Get Started</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+<!-- Navbar & Hero End -->
+        <script>
+             // Sticky Navbar
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.sticky-top').addClass('shadow-sm').css('top', '0px');
+        } else {
+            $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
+        }
+    });
+        </script>

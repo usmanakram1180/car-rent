@@ -1,0 +1,144 @@
+
+ <!-- Carousel Start -->
+        <div class="header-carousel">
+            <div id="carouselId" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <%= image_tag 'carousel-2.jpg', class: 'img-fluid w-100', alt: 'First slide' %>
+                        <div class="carousel-caption">
+                            <div class="container py-4">
+                                <div class="row g-5">
+                                    <div class="col-lg-6 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
+                                        <div class="bg-secondary rounded p-5">
+                                            <h4 class="text-white mb-4">CONTINUE CAR RESERVATION</h4>
+                                            <%= form_with model: @booking, url: bookings_path, local: false, html: { id: 'booking-form' } do |form| %>                                            
+  <div class="row g-3">
+    <div class="col-12">
+      <%= form.select :car_type, options_for_select(['VW Golf VII', 'Audi A1 S-Line', 'Toyota Camry', 'BMW 320 ModernLine']), { include_blank: 'Select Your Car type' }, { class: "form-select", aria: { label: "Default select example" }, required: true } %>
+    </div>
+    <div class="col-12">
+      <div class="input-group">
+        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+          <span class="fas fa-map-marker-alt"></span> <span class="ms-1">Pick Up</span>
+        </div>
+        <%= form.text_field :pick_up_location, class: "form-control", placeholder: "Enter a City or Airport", aria: { label: "Enter a City or Airport" },required: true %>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="input-group">
+        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+          <span class="fas fa-map-marker-alt"></span><span class="ms-1">Drop off</span>
+        </div>
+        <%= form.text_field :drop_off_location, class: "form-control", placeholder: "Enter a City or Airport", aria: { label: "Enter a City or Airport" },required: true %>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="input-group">
+        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+          <span class="fas fa-calendar-alt"></span><span class="ms-1">Pick Up</span>
+        </div>
+        <%= form.date_field :pick_up_date, class: "form-control" %>
+        <%= form.select :pick_up_time, options_for_select(['12:00AM', '1:00AM', '2:00AM', '3:00AM', '4:00AM', '5:00AM', '6:00AM', '7:00AM']), {}, { class: "form-select ms-3", aria: { label: "Default select example" }, required: true } %>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="input-group">
+        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+          <span class="fas fa-calendar-alt"></span><span class="ms-1">Drop off</span>
+        </div>
+        <%= form.date_field :drop_off_date, class: "form-control" %>
+       <%= form.select :drop_off_time, options_for_select(['12:00AM', '1:00AM', '2:00AM', '3:00AM', '4:00AM', '5:00AM', '6:00AM', '7:00AM']), {}, { class: "form-select ms-3", aria: { label: "Default select example" }, required: true } %>
+      </div>
+    </div>
+    <div class="col-12">
+      <%= form.submit "Book Now", class: "btn btn-light w-100 py-2" %>
+    </div>
+  </div>
+<% end %>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 d-none d-lg-flex fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
+                                        <div class="text-start">
+                                            <h1 class="display-5 text-white">Get 15% off your rental Plan your trip now</h1>
+                                            <p>Treat yourself in USA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <%= image_tag 'carousel-1.jpg', class: 'img-fluid w-100', alt: 'First slide' %>
+                        <div class="carousel-caption">
+                            <div class="container py-4">
+                                <div class="row g-5">
+                                    <div class="col-lg-6 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
+                                        <div class="bg-secondary rounded p-5">
+                                            <h4 class="text-white mb-4">CONTINUE CAR RESERVATION</h4>
+                                            <%= form_with model: @booking, url: bookings_path, local: false, html: { id: 'booking-form' } do |form| %>
+  <div class="row g-3">
+    <div class="col-12">
+      <%= form.select :car_type, options_for_select([ 'VW Golf VII', 'Audi A1 S-Line', 'Toyota Camry', 'BMW 320 ModernLine']), { include_blank: 'Select Your Car type' }, { class: "form-select", aria: { label: "Default select example" }, required: true } %>
+    </div>
+    <div class="col-12">
+      <div class="input-group">
+        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+          <span class="fas fa-map-marker-alt"></span> <span class="ms-1">Pick Up</span>
+        </div>
+        <%= form.text_field :pick_up_location, class: "form-control", placeholder: "Enter a City or Airport", aria: { label: "Enter a City or Airport" } %>
+      </div>
+    </div>
+    <div class="col-12">
+      <a href="#" class="text-start text-white d-block mb-2">Need a different drop-off location?</a>
+      <div class="input-group">
+        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+          <span class="fas fa-map-marker-alt"></span><span class="ms-1">Drop off</span>
+        </div>
+        <%= form.text_field :drop_off_location, class: "form-control", placeholder: "Enter a City or Airport", aria: { label: "Enter a City or Airport" } %>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="input-group">
+        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+          <span class="fas fa-calendar-alt"></span><span class="ms-1">Pick Up</span>
+        </div>
+        <%= form.date_field :pick_up_date, class: "form-control" %>
+        <%= form.select :pick_up_time, options_for_select(['12:00AM', '1:00AM', '2:00AM', '3:00AM', '4:00AM', '5:00AM', '6:00AM', '7:00AM']), {}, { class: "form-select ms-3", aria: { label: "Default select example" } } %>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="input-group">
+        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+          <span class="fas fa-calendar-alt"></span><span class="ms-1">Drop off</span>
+        </div>
+        <%= form.date_field :drop_off_date, class: "form-control" %>
+        <%= form.select :drop_off_time, options_for_select(['12:00AM', '1:00AM', '2:00AM', '3:00AM', '4:00AM', '5:00AM', '6:00AM', '7:00AM']), {}, { class: "form-select ms-3", aria: { label: "Default select example" } } %>
+      </div>
+    </div>
+    <div class="col-12">
+      <%= form.submit "Book Now", class: "btn btn-light w-100 py-2" %>
+    </div>
+  </div>
+<% end %>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 d-none d-lg-flex fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
+                                        <div class="text-start">
+                                            <h1 class="display-5 text-white">Get 15% off your rental! Choose Your Model </h1>
+                                            <p>Treat yourself in USA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
